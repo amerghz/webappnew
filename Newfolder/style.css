@@ -1,0 +1,93 @@
+:root{
+    padding: 0px;
+    margin: 0px;
+    --primary:  #00BFFF;
+    --dark:  	#0000FF;
+    --light:    #ADD8E6;
+}
+ 
+ body {
+        width: 95%;
+        background: var(--light);
+        font-family:Arial, Helvetica, sans-serif ;
+        color: var(--dark);
+        text-align: justify;
+        
+ }
+        
+
+
+div.main-body {
+	display: grid;
+	grid-template-columns: minmax(300px , auto)1fr;
+	grid-template-areas: "navbar mainContent";
+	grid-gap: 20px;
+}
+
+nav#navbar {
+	grid-area: navbar;
+	position: fixed;
+}
+
+nav#navbar a {
+	display: block;
+	border: 2px solid var(--dark);
+	padding: 5px;
+	margin: 10px 0;
+	text-decoration: none;
+	color: var(--dark);
+}
+nav#navbar a:hover {
+		color: var(--light);
+    background: var(--dark);
+}
+
+
+main#main-doc {
+	grid-area: mainContent;
+}
+
+#bottom{
+    display: flex;
+    justify-content: space-between;
+}
+#j-text{
+    text-align: center;
+   
+   }
+
+div#b-one{
+    line-height: 5px;
+    margin-left: 50px;
+}
+div#b-two{
+    margin-right: 50px;
+}
+
+.icon{
+    padding: 0px 10px;
+}
+
+
+
+@media screen and (max-width:680px){
+    div.main-body {
+        display: block;
+       
+    }
+    
+    nav#navbar {
+     
+        position: relative;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+        padding-bottom: 60px;
+    }
+    
+   h1, h2{
+    text-align: center;
+   }
+    
+    }
