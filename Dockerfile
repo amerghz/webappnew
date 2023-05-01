@@ -23,7 +23,7 @@ FROM nginx:latest
 #create path and add index.html
 #ADD https://github.com/ebsint/dev/blob/master/Newfolder /usr/share/nginx/html
 WORKDIR /usr/share/nginx/html
-RUN cp /Newfolder/* /usr/share/nginx/html
+RUN COPY /Newfolder/* /usr/share/nginx/html
 RUN rm -rf Newfolder 
 #RUN chmod +r /usr/share/nginx/html/index.html
 #RUN rm index.html
